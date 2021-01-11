@@ -2,10 +2,10 @@ import React from "react";
 import { View, Text } from "react-native";
 
 
-export default function Home() {
+export default function UserLogged() {
     return (
         <View>
-            <Text>Home...</Text>
+            <Text>UserLogged...</Text>
         </View>
     );
 }
