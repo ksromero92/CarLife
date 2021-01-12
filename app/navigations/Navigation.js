@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
-import HomeStack from "./HomeStack";
+import AccountStack from "./AccountStack";
 import GarajeStack from "./GarajeStack";
 import TimeLineStack from "./TimeLineStack";
 import PerfilStack from "./PerfilStack";
@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="home"
+        initialRouteName="accountStack"
         tabBarOptions={{
           inactiveTintColor: "#003559", //B9D6F2    006DAA  061A40   0353A4  003559
           activeTintColor: "#006DAA",
@@ -23,8 +23,8 @@ export default function Navigation() {
         })}
       >
         <Tab.Screen
-          name="home"
-          component={HomeStack}
+          name="accountStack"
+          component={AccountStack}
           options={{ title: "Home" }}
         />
         <Tab.Screen
@@ -50,7 +50,7 @@ export default function Navigation() {
 function screenOptions(route, color) {
   let iconName;
   switch (route.name) {
-    case "home":
+    case "accountStack":
       iconName = "home";
       break;
     case "garaje":

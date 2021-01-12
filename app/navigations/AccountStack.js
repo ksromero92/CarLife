@@ -1,18 +1,18 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home/Home";
-import Login from "../screens/Home/Login";
-import Register from "../screens/Home/Register";
+import Account from "../screens/Account/Account";
+import Login from "../screens/Account/Login";
+import Register from "../screens/Account/Register";
 
 const Stack = createStackNavigator();
 
-export default function HomeStack() {
+export default function AccountStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="homeStack"
-        component={Home}
-        options={{ title: "Home" }}
+        name="account"
+        component={Account}
+        options={{ title: "CarLife" }}
       />
       <Stack.Screen
         name="login"

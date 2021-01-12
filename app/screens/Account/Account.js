@@ -4,7 +4,7 @@ import Loading from "../../components/Loading";
 import UserGuest from "./UserGuest";
 import UserLogged from "./UserLogged";
 
-export default function Home() {
+export default function Account() {
   const [login, SetLogin] = useState(null);
 
   useEffect(() => {

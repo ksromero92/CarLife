@@ -9,7 +9,7 @@ export default function UserGuest() {
   return (
     <ScrollView centerContent={true} style={styles.viewBodyStyle}>
       <Image
-        source={require("../../../assets/img/user-guest.jpg")}
+        source={require("../../../assets/img/LogoCarLife.png")}
         resizeMode="contain"
         style={styles.imageStyle}
       />
