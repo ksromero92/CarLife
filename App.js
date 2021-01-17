@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import Navigation from "./app/navigations/Navigation";
+import StartApp from "./app/screens/StartApp";
 import { YellowBox } from 'react-native'
 import { firebaseApp } from "./app/utilities/firebase";
 
 export default function App() {
-  return <Navigation/>;
+  return <StartApp/>;
 }
 // @TODO: This is to hide a Warning caused by NativeBase after upgrading to RN 0.62
 
