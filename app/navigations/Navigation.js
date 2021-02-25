@@ -15,8 +15,8 @@ export default function Navigation() {
       <Tab.Navigator
         initialRouteName="accountStack"
         tabBarOptions={{
-          inactiveTintColor: "#003559", //B9D6F2    006DAA  061A40   0353A4  003559
-          activeTintColor: "#006DAA",
+          inactiveTintColor: "#003559", //B9D6F2    006DAA  061A40   0353A4  003559  #3F89CF
+          activeTintColor: "#3F89CF",
         }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color }) => screenOptions(route, color),

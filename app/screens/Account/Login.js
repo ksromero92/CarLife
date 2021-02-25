@@ -4,6 +4,8 @@ import { Divider } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import Toast from "react-native-easy-toast";
 import LoginForm from "../../components/Account/LoginForm";
+import LoginFacebook from "../../components/Account/LoginFacebook";
+import LoginGoogle from "../../components/Account/LoginGoogle";
 
 
 export default function Login() {
@@ -20,7 +22,10 @@ export default function Login() {
         <CreateCuenta />
       </View>
       <Divider style={styles.DividerStyle}></Divider>
-      <Text>Social Login</Text>
+      <View style={styles.viewContainerSocialStyle}>
+        <LoginFacebook/>
+        <LoginGoogle/>
+      </View>
       <Toast ref={toastRef} position="center" opacity={0.9} />
     </ScrollView>
   );
@@ -51,13 +56,16 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
   },
+  viewContainerSocialStyle: {
+    alignItems:"center"
+  },
   TextRegisterStyle: {
     marginTop: 15,
     marginLeft: 10,
     marginRight: 10,
   },
   TextBtnRegisterStyle: {
-    color: "#006DAA",
+    color: "#3F89CF",
     fontWeight: "bold",
   },
   DividerStyle: {

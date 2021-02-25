@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   btnStyle: {
-    backgroundColor: "#006DAA",
+    backgroundColor: "#3F89CF",
   },
   iconRight: {
     color: "#c1c1c1",
