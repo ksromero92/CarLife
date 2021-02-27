@@ -22,7 +22,7 @@ export default function Perfil() {
     setRealoadUserInfo(false);
   }, [realoadUserInfo]);
 
-  return (
+   return (
     <View style={styles.viewUserInfo}>
     {userInfo && (
       <InfoUser

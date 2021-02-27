@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import { StyleSheet, View, ScrollView, Text, Image } from "react-native";
 import { Divider } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
@@ -6,7 +6,6 @@ import Toast from "react-native-easy-toast";
 import LoginForm from "../../components/Account/LoginForm";
 import LoginFacebook from "../../components/Account/LoginFacebook";
 import LoginGoogle from "../../components/Account/LoginGoogle";
-
 
 export default function Login() {
   const toastRef = useRef();
@@ -23,8 +22,8 @@ export default function Login() {
       </View>
       <Divider style={styles.DividerStyle}></Divider>
       <View style={styles.viewContainerSocialStyle}>
-        <LoginFacebook/>
-        <LoginGoogle/>
+        <LoginFacebook />
+        <LoginGoogle />
       </View>
       <Toast ref={toastRef} position="center" opacity={0.9} />
     </ScrollView>
@@ -35,12 +34,12 @@ function CreateCuenta() {
   const navigation = useNavigation();
   return (
     <Text style={styles.TextRegisterStyle}>
-      ¿Aun no tiene una cuenta?{" "}
+      ¿Aun no tienes una cuenta?{" "}
       <Text
         style={styles.TextBtnRegisterStyle}
         onPress={() => navigation.navigate("register")}
       >
-        Regístrate
+        Regístrate!
       </Text>
     </Text>
   );
@@ -57,7 +56,8 @@ const styles = StyleSheet.create({
     marginLeft: 40,
   },
   viewContainerSocialStyle: {
-    alignItems:"center"
+    marginLeft:"30%",
+    flexDirection: "row",
   },
   TextRegisterStyle: {
     marginTop: 15,
