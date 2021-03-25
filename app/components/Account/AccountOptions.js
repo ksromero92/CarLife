@@ -109,6 +109,33 @@ function generateOptions(selectedComponent) {
       iconColorRight: "#ccc",
       onPress: () => selectedComponent("password"),
     },
+    {
+      title: "Formas de pago",
+      iconType: "material-community",
+      iconNameLeft: "credit-card-settings-outline",
+      iconColorLeft: "#ccc",
+      iconNameRight: "chevron-right",
+      iconColorRight: "#ccc",
+      onPress: () => alert("This is a button!"),
+    },
+    {
+      title: "Ayuda",
+      iconType: "material-community",
+      iconNameLeft: "lifebuoy",
+      iconColorLeft: "#ccc",
+      iconNameRight: "chevron-right",
+      iconColorRight: "#ccc",
+      onPress: () => alert("This is a button!"),
+    },
+    {
+      title: "Terminos y condiciones",
+      iconType: "material-community",
+      iconNameLeft: "clipboard-text-outline",
+      iconColorLeft: "#ccc",
+      iconNameRight: "chevron-right",
+      iconColorRight: "#ccc",
+      onPress: () => alert("This is a button!"),
+    },
   ];
 }
 

@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Account from "../screens/Account/Account";
 import Login from "../screens/Account/Login";
 import Register from "../screens/Account/Register";
+import AddVehiculo from "../screens/Home/AddVehiculo";
 import Notification from "../components/Notification";
 
 const Stack = createStackNavigator();
@@ -13,7 +14,6 @@ export default function AccountStack() {
       <Stack.Screen
         name="account"
         component={Account}
-        // options={{ title: "CarLife" }}
         options={{
           title: "CarLife",
           headerRight: () => (
@@ -30,6 +30,11 @@ export default function AccountStack() {
         name="register"
         component={Register}
         options={{ title: "Registro" }}
+      /> 
+      <Stack.Screen
+        name="addVehiculo"
+        component={AddVehiculo}
+        options={{ title: "Nuevo Vehiculo" }}
       />
     </Stack.Navigator>
   );

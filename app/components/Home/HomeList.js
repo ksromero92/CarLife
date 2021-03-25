@@ -2,46 +2,71 @@ import React from "react";
 import {
   SafeAreaView,
   View,
+  TouchableOpacity ,
   FlatList,
   StyleSheet,
   Text,
   StatusBar,
   ActivityIndicator,
+  Alert,
+  AlertIOS,
 } from "react-native";
 import { Image } from "react-native-elements";
 import { size } from "lodash";
 import { useNavigation } from "@react-navigation/native";
 
 export default function HomeList() {
+  const navigation = useNavigation();
+  const createThreeButtonAlert = () =>
+    Alert.alert(
+      "¡Oops aun no tienes Vehiculos registrados!",
+      "",
+      [
+        {
+          text: "Cancelar",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },       
+        { text: "Registrar",
+          onPress: () => navigation.navigate("addVehiculo")
+        }
+      ],
+      { cancelable: false }
+    );
+
   const DATA = [
     {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28bb",
       title: "Vehiculos",
       Desc: "Registra tus vehiculos",
       img: require("../../../assets/img/HomeCar3.png"),
+      onPress: () => navigation.navigate("addVehiculo"),
     },
     {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28bv",
       title: "Eventos",
       Desc: "LLena el diario de tus vehiculos",
       img: require("../../../assets/img/HomeCalendar3.png"),
+      onPress: () => createThreeButtonAlert(),
     },
     {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28bc",
       title: "Alertas",
       Desc: "Crea tus alertas",
       img: require("../../../assets/img/HomeAlert3.png"),
+      onPress: () => createThreeButtonAlert(),
     },
     {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28bx",
       title: "Reportes",
       Desc: "Enterate del rendimiento de tus \nvehiculos",
       img: require("../../../assets/img/HomeBar3.png"),
+      onPress: () => createThreeButtonAlert(),
     },
   ];
   const Item = ({ item }) => {
     return (
-      <View style={styles.item}>
+      <TouchableOpacity  style={styles.item} onPress={item.onPress}>
         <View style={styles.viewItemImage}>
           <Image
             resizeMode="cover"
@@ -54,7 +79,7 @@ export default function HomeList() {
           <Text style={styles.title}>{item.title}</Text>
           <Text style={styles.ItemDescription}>{item.Desc}</Text>
         </View>
-      </View>
+      </TouchableOpacity >
     );
   };
   const renderItem = ({ item }) => <Item item={item} />;
@@ -97,5 +122,12 @@ const styles = StyleSheet.create({
     paddingTop: 2,
     color: "grey",
     width: 300,
+  },
+  btnContainerAlert: {
+    marginTop: 20,
+    width: "95%",
+  },
+  btnAlert: {
+    backgroundColor: "#3F89CF",
   },
 });
